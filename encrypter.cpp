@@ -1,3 +1,8 @@
+/* Encrypter and Decrypter
+* Takes in a text file and encrypts it, outputs it to a file.
+* Then it takes that encrypted file and decrypts it to a new file.
+*/
+
 #include <iostream>
 #include <fstream>
 #include <string>
@@ -41,7 +46,9 @@ int main()
 {
   ifstream in;
   string filename;
-  in.open("test.txt");
+  cout << "Enter the name of a text file to be encrypted: ";
+  cin >> filename;
+  in.open(filename.c_str());
   if (in.fail())
   {
   	cout << ("Couldn't find read text file");
